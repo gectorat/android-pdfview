@@ -448,6 +448,10 @@ public class PDFView extends SurfaceView {
             canvas.translate(-localTranslationX, -localTranslationY);
             return;
         }
+	
+	paint.setAntiAlias(true);
+        paint.setFilterBitmap(true);
+        paint.setDither(true);
 
         canvas.drawBitmap(renderedBitmap, srcRect, dstRect, paint);
 
